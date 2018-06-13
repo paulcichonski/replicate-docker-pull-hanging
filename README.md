@@ -34,6 +34,8 @@ ssh core@<staging_server_ip>
 docker pull paulcichonski/docker-logstash-kafka:latest
 
 docker tag paulcichonski/docker-logstash-kafka:latest <registry_ip>:5000/docker-logstash-kafka:latest
+
+## if this fails you might need to restart the registry because timing issues, just ssh to registry and `sudo systemctl restart registry`
 docker push <registry_ip>:5000/docker-logstash-kafka:latest
 ```
 
